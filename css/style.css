@@ -5,5 +5,266 @@
 }
 
 body {
+    font-size: 16px;
+}
+
+/* utilities */
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.col-40 {
+    width: 40%;
+}
+
+.col-60 {
+    width: 60%;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
 }
+
+.d-flex{
+    display: flex;
+}
+
+.d-justify-align-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.height-100{
+    height: 100%;
+}
+
+.rounded {
+    border-radius: 20rem;
+}
+
+.margin-d-s-1{
+    margin: 0 1rem;
+}
+
+/* Inizio stile pagina */
+
+.container-general {
+    background: rgb(220,219,209);
+    background: linear-gradient(0deg, rgba(220,219,209,1) 85%, rgba(0,150,136,1) 85%);
+    width: 100%;
+    height: 100vh;
+}
+
+.contenitore-app{
+    width: 80%;
+    height: 95vh;
+    background-color: #fff;
+}
+
+.sidebar {
+    border-right: 0.1rem solid #d7d7d7;
+}
+
+.header img {
+    width: 50px;
+    border: 0.2rem solid #fff;
+}
+
+.header {
+    height: 70px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem 0 0.5rem;
+}
+
+.profile-info, .header-icons, .notifiche, .card-lista, .chat-footer {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i{
+    font-size: 1.3rem;
+    color: #b1b1b1;
+}
+
+.header-icons i:hover{
+    color: #949494;
+}
+
+.data-sottotitolo{
+    font-size: 0.8rem;
+}
+
+.notifiche{
+    height: 80px;
+    background-color: #8edafc;
+    padding: 0 1rem 0 1rem;
+}
+
+.icona-notifiche{
+    width: 50px;
+    height: 50px;
+    background-color: #f2fbff;
+    color: #8edafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.cerca{
+    height: 50px;
+    background-color: #fafafa;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.cerca input, .cerca button{
+    height: 80%;
+    border-radius: none;
+    background-color: #fff;
+    border: 0.1rem solid #e9ebeb;
+}
+
+.cerca input{
+    width: 80%;
+    border-left: none;
+    padding: 0 0.5rem;
+}
+
+.cerca button{
+    width: 20%;
+}
+
+.cerca i {
+    font-size: 1.2rem;
+    color: #b1b1b1;
+}
+
+.lista-contatti{
+    width: 100%;
+    height: calc(100% - 200px);
+    overflow-y: scroll;
+}
+
+.card-lista{
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    border-top: 0.1rem solid #e9ebeb;
+    cursor: pointer;
+}
+
+.card-lista .data-sottotitolo{
+    color: #949494;
+} 
+
+.card-lista:hover{
+    background-color: #e9ebeb;
+}
+
+.card-lista img {
+    width: 60px;
+}
+
+.card-lista .profile-info{
+    align-items: flex-start;
+}
+
+.chat {
+    width: 100%;
+    padding: 3rem 0 0 0;
+    height: calc(100% - 130px);
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+}
+
+.contenitore-messaggi {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.messaggio {
+    font-size: 0.8rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 40%;
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.inviato{
+    align-self: flex-end;
+    background-color: #d5f9ba;
+}
+
+.ricevuto{
+    background-color: #fff;
+}
+
+.orario-messaggio{
+    position: absolute;
+    font-size: 0.6rem;
+    bottom: 0.2rem;
+    right: 0.3rem;
+}
+
+.messaggio i {
+    position: absolute;
+    top: 1rem;
+    right: 0.3rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.messaggio i:hover {
+    opacity: 1;
+}
+
+.chat-footer {
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    background-color: #eaeaea;
+    padding: 0.5rem 0;
+}
+
+.chat-footer input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-radius: 0.1rem;
+}
+
+.chat-footer .footer-icon{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-footer input {
+    padding: 0 1rem;
+}
+
+.chat-footer i {
+    font-size: 1.3rem;
+    color: #687176;
+}
+
+.chat-footer i:hover {
+    color: #949494;
+}
+

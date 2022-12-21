@@ -11,7 +11,133 @@
     </head>
     <body>
         <div id="app">
+            <div class="container-general">
+                <div class="row height-100">
+                    <div class="col height-100 col-100 d-justify-align-center">
+                        <div class="contenitore-app">
+                            <div class="row height-100">
+                                <!-- Sidebar contatti -->
+                                <div class="col height-100 col-40">
+                                    <aside class="sidebar height-100">
+                                        <div class="header header-sidebar">
+                                            <div class="profile-info">
+                                                <img class="rounded immagine-header" src="./img/avatar_io.jpg" alt="main-profile-picture">
+                                                <h5 class="margin-d-s-1" >Sofia</h5>
+                                            </div>
+                                            <div class="header-icons">
+                                                <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
+                                                <a class="margin-d-s-1" href="#"><i class="fa-solid fa-message"></i></a>
+                                                <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="notifiche">
+                                            <div class="rounded icona-notifiche">
+                                                <i class="fa-solid fa-bell-slash"></i>
+                                            </div>                                            
+                                            <div class="copy margin-d-s-1">
+                                                <h5>Ricevi notifiche di nuovi messaggi</h5>
+                                                <a class="data-sottotitolo" href="#">Attiva notifiche desktop</a>
+                                            </div>
+                                        </div>
+                                        <div class="cerca">
 
+                                            <!-- Elemento Dinamico -->
+
+                                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+
+                                            <!-- Fine elemento dinamico -->
+
+                                        </div>
+                                        <!-------------------->
+                                        <!-- Lista Contatti -->
+                                        <!-------------------->
+                                        <div class="lista-contatti">
+
+                                            <!-- Elemento Dinamico -->
+
+                                            <div class="card-lista">
+                                                <div class="profile-info">
+                                                    <img class="rounded immagine-header" src="./img/avatar_io.jpg" alt="main-profile-picture">
+                                                    <div class="margin-d-s-1">
+                                                        <h5>Sofia</h5>
+                                                        <p class="data-sottotitolo">Ultimo messaggio inviato</p>
+                                                    </div>                                                   
+                                                </div>
+                                                <div class="header-icons">
+                                                    <p class="data-sottotitolo">12:00</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Fine elemento dinamico -->
+
+                                        </div>
+                                    </aside>
+                                </div>
+                                <!-- Schermata chat -->
+                                <div class="col height-100 col-60">
+                                    <div class="schermata-chat height-100">
+                                        <div class="header header-chat">
+                                            <div class="profile-info">
+
+                                                <!-- Elemento Dinamico -->
+
+                                                <img class="rounded immagine-header" src="./img/avatar_io.jpg" alt="main-profile-picture">
+                                                <div class="copy margin-d-s-1">
+                                                    <h5>Sofia</h5>
+                                                    <p class="data-sottotitolo">Ultimo Accesso oggi alle 12:00</p>
+                                                </div>  
+                                                
+                                                <!-- Fine elemento dinamico -->
+
+                                            </div>
+                                            <div class="header-icons">
+                                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                                <a class="margin-d-s-1" href="#"><i class="fa-solid fa-paperclip"></i></a>
+                                                <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="chat">
+                                            <div class="contenitore-messaggi">
+
+                                                <!-- Elemento Dinamico -->
+
+                                                <div class="messaggio inviato">
+                                                    <p>Hai portato il cane a spasso?</p>
+                                                    <p class="orario-messaggio">15:50</p>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                                <div class="messaggio inviato">
+                                                    <p>Hai portato il cane a spasso?</p>
+                                                    <p class="orario-messaggio">15:50</p>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                                <div class="messaggio ricevuto">
+                                                    <p>Hai portato il cane a spasso?</p>
+                                                    <p class="orario-messaggio">15:50</p>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+
+                                                <!-- Fine elemento dinamico -->
+
+                                            </div>
+                                        </div>
+                                        <div class="chat-footer">
+                                            <div class="footer-icon">
+                                                <a href="#"><i class="fa-regular fa-face-smile"></i></a>
+                                            </div>                                           
+                                                <input type="text" placeholder="Scrivi un messaggio">
+                                            <div class="footer-icon">
+                                                <a href="#"><i class="fa-solid fa-microphone"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./js/javascript.js"></script>
