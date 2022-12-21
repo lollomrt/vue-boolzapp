@@ -56,7 +56,7 @@
 
                                             <!-- Elemento Dinamico -->
 
-                                            <div class="card-lista" v-for="(contact, index) in contacts">
+                                            <div class="card-lista" v-for="(contact, index) in contacts" @click="changeChat(index)" :class="(contatoreContatti == index) ? 'card-lista-active' : '' ">
                                                 <div class="profile-info">
                                                     <img class="rounded immagine-header" :src="getAvatar(index)" alt="main-profile-picture">
                                                     <div class="margin-d-s-1">
@@ -82,9 +82,9 @@
 
                                                 <!-- Elemento Dinamico -->
 
-                                                <img class="rounded immagine-header" src="./img/avatar_io.jpg" alt="main-profile-picture">
+                                                <img class="rounded immagine-header" :src="getAvatar(contatoreContatti)" alt="main-profile-picture">
                                                 <div class="copy margin-d-s-1">
-                                                    <h5>Sofia</h5>
+                                                    <h5>{{ contacts[contatoreContatti].name }}</h5>
                                                     <p class="data-sottotitolo">Ultimo Accesso oggi alle 12:00</p>
                                                 </div>  
                                                 

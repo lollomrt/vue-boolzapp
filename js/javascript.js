@@ -173,10 +173,8 @@ createApp({
         getAvatar(i){
             return "./img/avatar" + this.contacts[i].avatar + ".jpg";
         },
-        getMessages(i){
-            let singlemessage = this.contacts.messages(i)
-            
-
+        changeChat(i){
+            this.contatoreContatti = i
         }
     }
 }).mount("#app")

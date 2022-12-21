@@ -173,6 +173,10 @@ body {
     background-color: #e9ebeb;
 }
 
+.card-lista-active{
+    background-color: #e9ebeb;
+}
+
 .card-lista img {
     width: 60px;
 }
