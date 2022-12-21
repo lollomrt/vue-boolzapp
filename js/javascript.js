@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return {
+            contatoreContatti: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -166,6 +167,16 @@ createApp({
                     ],
                 }
             ]
+        }
+    },
+    methods:{
+        getAvatar(i){
+            return "./img/avatar" + this.contacts[i].avatar + ".jpg";
+        },
+        getMessages(i){
+            let singlemessage = this.contacts.messages(i)
+            
+
         }
     }
 }).mount("#app")
