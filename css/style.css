@@ -216,6 +216,7 @@ body {
 
 .ricevuto{
     background-color: #fff;
+    align-self: flex-start;
 }
 
 .orario-messaggio{

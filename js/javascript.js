@@ -177,9 +177,32 @@ createApp({
         changeChat(i){
             this.contatoreContatti = i
         },
-        addMessage(index){
-            let newMessage 
-            this.contacts[index].messages.push(newMessage)
+        addMessage(index){ 
+            newObj =
+            {
+                date: '10/01/2020 15:50:00',
+                message: this.newMessage,
+                status: 'sent'
+            },
+
+            this.contacts[index].messages.push(newObj)
+            this.newMessage = ""
+            setTimeout(() => {
+                newObjResponder =
+                {
+                    date: '10/01/2020 15:50:00',
+                    message: 'ok',
+                    status: 'received'
+                },
+                this.contacts[index].messages.push(newObjResponder)
+            },1000)
+        },
+        separatoreDate(){
+            this
+        }
+
+        generatoreDataOdierna(){
+            
         }
     }
 }).mount("#app")
