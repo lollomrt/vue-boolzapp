@@ -62,11 +62,11 @@
                                                     <img class="rounded immagine-header" :src="getAvatar(index)" alt="main-profile-picture">
                                                     <div class="margin-d-s-1">
                                                         <h5>{{ contact.name }}</h5>
-                                                        <p class="data-sottotitolo">Ultimo messaggio inviato</p>
+                                                        <p class="data-sottotitolo">{{ getPreviewMessage(index) }}</p>
                                                     </div>                                                   
                                                 </div>
                                                 <div class="header-icons">
-                                                    <p class="data-sottotitolo">12:00</p>
+                                                    <p class="data-sottotitolo">{{ getLastDate(index) }}</p>
                                                 </div>
                                             </div>
 
@@ -86,7 +86,7 @@
                                                 <img class="rounded immagine-header" :src="getAvatar(contatoreContatti)" alt="main-profile-picture">
                                                 <div class="copy margin-d-s-1">
                                                     <h5>{{ contacts[contatoreContatti].name }}</h5>
-                                                    <p class="data-sottotitolo">Ultimo Accesso oggi alle 12:00</p>
+                                                    <p class="data-sottotitolo">Ultimo Accesso oggi alle {{ getLastDate(contatoreContatti) }}</p>
                                                 </div>  
                                                 
                                                 <!-- Fine elemento dinamico -->
@@ -105,7 +105,7 @@
 
                                                 <div class="messaggio inviato" v-for="(singleMessage, index) in contacts[contatoreContatti].messages" :class="(singleMessage.status === 'sent') ? 'inviato' : 'ricevuto'">
                                                     <p>{{ singleMessage.message }}</p>
-                                                    <p class="orario-messaggio">{{ singleMessage.date }}</p>
+                                                    <p class="orario-messaggio">{{ splitDate(singleMessage.date) }}</p>
                                                     <i class="fa-solid fa-chevron-down"></i>
                                                 </div>
 

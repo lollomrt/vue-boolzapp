@@ -197,12 +197,27 @@ createApp({
                 this.contacts[index].messages.push(newObjResponder)
             },1000)
         },
-        separatoreDate(){
-            this
+        splitDate(date){
+            let newDate = date.split(" ")[1].substring(0,5)
+            return newDate
+        },
+        getPreviewMessage(i){
+            let messages = this.contacts[i].messages
+            let lastMessage = messages[messages.length - 1].message
+            if (lastMessage.length > 25) {
+                lastMessage = lastMessage.substring(0, 26) + "..."
+            }
+            return lastMessage
+        },
+        getLastDate(i){
+            let messages = this.contacts[i].messages
+            let newDate = messages[messages.length - 1].date
+            newDate = this.splitDate(newDate)
+            return newDate
         }
 
-        generatoreDataOdierna(){
+        // generatoreDataOdierna(){
             
-        }
+        // }
     }
 }).mount("#app")
