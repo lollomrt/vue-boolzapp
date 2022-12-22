@@ -102,19 +102,9 @@
 
                                                 <!-- Elemento Dinamico -->
 
-                                                <div class="messaggio inviato">
-                                                    <p>Hai portato il cane a spasso?</p>
-                                                    <p class="orario-messaggio">15:50</p>
-                                                    <i class="fa-solid fa-chevron-down"></i>
-                                                </div>
-                                                <div class="messaggio inviato">
-                                                    <p>Hai portato il cane a spasso?</p>
-                                                    <p class="orario-messaggio">15:50</p>
-                                                    <i class="fa-solid fa-chevron-down"></i>
-                                                </div>
-                                                <div class="messaggio ricevuto">
-                                                    <p>Hai portato il cane a spasso?</p>
-                                                    <p class="orario-messaggio">15:50</p>
+                                                <div class="messaggio inviato" v-for="(singleMessage, index) in contacts[contatoreContatti].messages" :class="(singleMessage.status == sent) ? 'inviato' : 'ricevuto'">
+                                                    <p>{{ singleMessage.message }}</p>
+                                                    <p class="orario-messaggio">{{ singleMessage.date }}</p>
                                                     <i class="fa-solid fa-chevron-down"></i>
                                                 </div>
 
@@ -126,7 +116,7 @@
                                             <div class="footer-icon">
                                                 <a href="#"><i class="fa-regular fa-face-smile"></i></a>
                                             </div>                                           
-                                                <input type="text" placeholder="Scrivi un messaggio">
+                                                <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyon.enter="addMessage(contatoreContatti)">
                                             <div class="footer-icon">
                                                 <a href="#"><i class="fa-solid fa-microphone"></i></a>
                                             </div>

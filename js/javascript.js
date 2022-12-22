@@ -4,6 +4,7 @@ createApp({
     data(){
         return {
             contatoreContatti: 0,
+            newMessage : "",
             contacts: [
                 {
                     name: 'Michele',
@@ -175,6 +176,10 @@ createApp({
         },
         changeChat(i){
             this.contatoreContatti = i
+        },
+        addMessage(index){
+            let newMessage 
+            this.contacts[index].messages.push(newMessage)
         }
     }
 }).mount("#app")
