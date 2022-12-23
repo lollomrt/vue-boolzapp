@@ -1,10 +1,13 @@
 const { createApp } = Vue;
 
+const dt = luxon.DateTime;
+
 createApp({
     data(){
         return {
             contatoreContatti: 0,
             newMessage : "",
+            nameFiltering: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -178,9 +181,13 @@ createApp({
             this.contatoreContatti = i
         },
         addMessage(index){ 
+
+            let newDateLuxon = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+            console.log(newDateLuxon)
+
             newObj =
             {
-                date: '10/01/2020 15:50:00',
+                date: newDateLuxon,
                 message: this.newMessage,
                 status: 'sent'
             },
@@ -190,7 +197,7 @@ createApp({
             setTimeout(() => {
                 newObjResponder =
                 {
-                    date: '10/01/2020 15:50:00',
+                    date: newDateLuxon,
                     message: 'ok',
                     status: 'received'
                 },
@@ -214,10 +221,18 @@ createApp({
             let newDate = messages[messages.length - 1].date
             newDate = this.splitDate(newDate)
             return newDate
-        }
-
-        // generatoreDataOdierna(){
+        },
+        listFilter(){
             
-        // }
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(this.nameFiltering.toLowerCase())){
+                    element.visible = true
+                }
+                else {
+                    element.visible = false
+                }
+            });
+            
+        }
     }
 }).mount("#app")

@@ -45,7 +45,7 @@
                                             <!-- Elemento Dinamico -->
 
                                             <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="nameFiltering" @keyup="listFilter">
 
                                             <!-- Fine elemento dinamico -->
 
@@ -57,17 +57,19 @@
 
                                             <!-- Elemento Dinamico -->
 
-                                            <div class="card-lista" v-for="(contact, index) in contacts" @click="changeChat(index)" :class="(contatoreContatti == index) ? 'card-lista-active' : '' ">
-                                                <div class="profile-info">
-                                                    <img class="rounded immagine-header" :src="getAvatar(index)" alt="main-profile-picture">
-                                                    <div class="margin-d-s-1">
-                                                        <h5>{{ contact.name }}</h5>
-                                                        <p class="data-sottotitolo">{{ getPreviewMessage(index) }}</p>
-                                                    </div>                                                   
-                                                </div>
-                                                <div class="header-icons">
-                                                    <p class="data-sottotitolo">{{ getLastDate(index) }}</p>
-                                                </div>
+                                            <div v-for="(contact, index) in contacts" @click="changeChat(index)" :class="(contatoreContatti == index) ? 'card-lista-active' : '' ">
+                                                <div class="card-lista" v-if="contact.visible">
+                                                    <div class="profile-info">
+                                                        <img class="rounded immagine-header" :src="getAvatar(index)" alt="main-profile-picture">
+                                                        <div class="margin-d-s-1">
+                                                            <h5>{{ contact.name }}</h5>
+                                                            <p class="data-sottotitolo">{{ getPreviewMessage(index) }}</p>
+                                                        </div>                                                   
+                                                    </div>
+                                                    <div class="header-icons">
+                                                        <p class="data-sottotitolo">{{ getLastDate(index) }}</p>
+                                                    </div>
+                                                </div>                                               
                                             </div>
 
                                             <!-- Fine elemento dinamico -->
